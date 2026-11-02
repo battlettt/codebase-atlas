@@ -26,3 +26,11 @@ finder for newcomers, and drift detection as the code changes.
 - Small functions, clear names, minimal abstraction.
 - Every feature ships with tests and a README section.
 - Test against real small repos, not toy examples only.
+
+## Layout and notes
+- Layers: `scanner` -> `parsers/` -> `resolver` + `graph` -> `analysis/`
+  and `retrieval` -> `report/` (text, html) -> `cli`. Stdlib only.
+- Test runner without pytest: `python tests/run_tests.py`; fixture repo is
+  `examples/sample-repo/` (tests assert exact lines there, so edit with care).
+- Q&A evidence must cite a line containing the matched terms; keep the
+  refusal string `NOT_SUPPORTED` in `retrieval.py` stable.

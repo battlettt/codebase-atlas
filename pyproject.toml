@@ -1,0 +1,13 @@
+[project]
+name = "codebase-atlas"
+version = "1.0.0"
+description = "Codebase onboarding intelligence: architecture map, grounded Q&A, impact, drift. Offline, stdlib only."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+atlas = "codebase_atlas.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
